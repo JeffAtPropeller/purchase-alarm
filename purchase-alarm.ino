@@ -36,22 +36,6 @@ Adafruit_MQTT_Subscribe purchaseFeed = Adafruit_MQTT_Subscribe(&mqtt, "shopify/p
 Adafruit_MQTT_Subscribe volumeFeed = Adafruit_MQTT_Subscribe(&mqtt, "control/volume");
 Adafruit_MQTT_Subscribe onOffFeed = Adafruit_MQTT_Subscribe(&mqtt, "control/onoff");
 
-/*************************** Sketch Code ************************************/
-void purchaseCallback(double x) {
-  Serial.print("Hey we're in a purchase callback, the value is: ");
-  Serial.println(x);
-}
-
-void onOffCallback(bool x) {
-  Serial.print("Hey we're in a onoff callback, the value is: ");
-  Serial.println(x);
-}
-
-void volumeCallback(int x) {
-  Serial.print("Hey we're in a volume callback, the slider value is: ");
-  Serial.println(x); 
-}
-
 void setup() {
   Serial.begin(115200);
 
